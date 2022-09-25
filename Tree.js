@@ -37,5 +37,39 @@ class BinarySearchTree{
             }
         }
     }
+    search(root, value) {
+        if (!root) {
+          return false;
+        } else {
+          if (root.value === value) {
+            return true;
+          } else if (value < root.value) {
+            return this.search(root.left, value);
+          } else {
+            return this.search(root.right, value);
+          }
+        }
+      }
+      preOrder(root) {
+        if (root) {
+          console.log(root.value);
+          this.preOrder(root.left);
+          this.preOrder(root.right);
+        }
+      }
+      inOrder(root) {
+        if (root) {
+          this.inOrder(root.left);
+          console.log(root.value);
+          this.inOrder(root.right);
+        }
+      }
+      postOrder(root) {
+        if (root) {
+          this.postOrder(root.left);
+          this.postOrder(root.right);
+          console.log(root.value);
+        }
+      }
 
 }
