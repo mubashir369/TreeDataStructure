@@ -6,3 +6,12 @@ class Node{
         this.left=null
     }
 }
+//create Binary Search Tree
+class BinarySearchTree{
+    constructor(){
+        this.root=null
+    }
+    isEmpty(){
+        return this.root===null
+    }
+}
